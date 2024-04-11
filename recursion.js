@@ -1,7 +1,11 @@
+/* The function below will run an infinite amount of times until the
+call stack is exhausted */
 function foo() {
     console.log('foo');
     foo();
 }
+
+// foo()
 
 function fetchWater(count) {
     if(count === 0) {
