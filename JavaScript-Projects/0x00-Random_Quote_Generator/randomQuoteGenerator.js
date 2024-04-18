@@ -4,8 +4,7 @@ let btn = document.querySelector('#new-quote');
 let quote = document.querySelector('.quote');
 let person = document.querySelector('.person');
 
-console.log(btn, quote, person)
-
+// An array of objects
 const quotes = [
     {quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", person: "Winston Churchill"},
     {quote: "It does not matter how slowly you go as long as you do not stop.", person: "Confucius"},
@@ -24,7 +23,7 @@ const quotes = [
     {quote: "In the end, it's not the years in your life that count. It's the life in your years.", person: "Abraham Lincoln"}
 ];
 
-
+// Add an event listener to the button
 btn.addEventListener('click', function(){
 
     let random = Math.floor(Math.random() * quotes.length);
