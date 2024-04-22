@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.product-small-image img{
+    width: 166px;
+    height: 92px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    opacity: .6;
+}
+
+.product-small-image img:hover{
+    opacity: 1;
+}
+.product-small-image {
+    float: left;
+}
+
+.product {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.img-container img{
+    height: 400px;
+    width: 500px;
+}
+
+.img-container {
+    float: right;
+    padding: 10px;
+}
