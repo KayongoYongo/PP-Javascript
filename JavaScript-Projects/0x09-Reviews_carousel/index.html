@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="style.css">
+        <!--Google font links-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Reviews</title>
+        <script defer src="reviews.js"></script>
+    </head>
+<body>
+    <!-- container-->
+    <section class="container">
+        <!-- title -->
+        <div class="title">
+            <h2>Our Reviews</h2>
+            <div class="underline"></div>
+        </div>
+        <!-- review -->
+        <article class="review">
+            <div class="img-container">
+                <img src="/0x09-Reviews_carousel/img/person-2.jpg" id="person-img"/>
+            </div>
+            <h4 id="author" class="author">Jane Doe</h4>
+            <p id="job" class="job">UX Designer</p>
+            <p id="info" class="info">Review goes here</p>
+        
+            <!--Prev next buttons-->
+            <div class="button-container">
+                <button class="prev-btn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="next-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <br>
+                <button class="random-btn">Random</button>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
