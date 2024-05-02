@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+
+nav {
+    background-color: grey;
+    position: fixed;
+    width: 100%; /* Ensures the navbar spans the entire width of the viewport */
+    top: 0; /* Fix the navbar to the top of the viewport */
+    z-index: 1000; /* Ensure the navbar appears above other content */
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    /*color: rgb(44, 177, 44);*/
+    color: white;
+    height: 100%;
+    padding:0 30px ;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover,
+nav a.active{
+    color: aqua; /* Change color to aqua */
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.808);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.svg-path {
+    fill: rgb(44, 177, 44); /* Change the fill color of the path */
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    background: black;
+    font-weight: 700;
+    font-size: 100px;
+}
+
+section:nth-child(odd) {
+    background: grey;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media(max-width: 400px){
+    .sidebar {
+        width: 100%;
+    }
+}
