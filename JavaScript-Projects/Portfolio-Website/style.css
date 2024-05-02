@@ -8,7 +8,7 @@
 }
 
 nav {
-    background-color: grey;
+    background-color: black;
     position: fixed;
     width: 100%; /* Ensures the navbar spans the entire width of the viewport */
     top: 0; /* Fix the navbar to the top of the viewport */
@@ -28,22 +28,21 @@ nav li {
 }
 
 nav a {
-    /*color: rgb(44, 177, 44);*/
-    color: white;
+    color: rgb(44, 177, 44);
+    font-size: 20px;
     height: 100%;
     padding:0 30px ;
     text-decoration: none;
     display: flex;
     align-items: center;
+    border-radius: 20px;
+    font-weight: 700;
 }
 
 nav a:hover,
-nav a.active{
-    color: aqua; /* Change color to aqua */
-}
-
-nav li:first-child {
-    margin-right: auto;
+nav a.active,
+nav a.active.hideOnMobile{
+    background-color: grey;
 }
 
 .sidebar{
@@ -84,8 +83,40 @@ section {
     align-items: center;
     color: aliceblue;
     background: black;
-    font-weight: 700;
-    font-size: 100px;
+}
+
+.about-me {
+    width: 80%; /* Adjust width as needed */
+    padding: 20px; /* Add padding for better readability */
+    margin-left: 50px; /* Adjust left margin to create space between the section and about-me container */
+    padding-left: 20px; /* Add padding to move content slightly to the right */
+    text-align: left; /* Align text to the left */
+}
+
+section .about-me h1 {
+    font-size: 50px;
+}
+
+section .about-me .green-text {
+    color: rgb(23, 204, 23)
+}
+
+section .about-me-img img {
+    width: 70%; /* Set the width to 50% of its parent container */
+    height: auto; /* Maintain the aspect ratio */
+    border: none; /* Remove any border */
+    border-radius: 50%; /* Makes the border circular */
+    box-shadow: 0 0 20px 5px rgb(44, 177, 44); /* Initial box-shadow with green glow */
+    animation: glowing 2s infinite alternate; /* Apply a glowing animation */
+}
+
+@keyframes glowing {
+    from {
+        box-shadow: 0 0 10px 0 rgb(44, 177, 44); /* Start with smaller green box-shadow */
+    }
+    to {
+        box-shadow: 0 0 20px 5px rgba(3, 240, 3, 0.966); /* Transition to larger green box-shadow */
+    }
 }
 
 section:nth-child(odd) {
