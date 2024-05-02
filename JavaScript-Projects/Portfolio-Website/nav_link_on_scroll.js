@@ -5,6 +5,7 @@ let navLinks = document.querySelectorAll('nav a');
 function removeActiveClass() {
     navLinks.forEach(link => {
         link.classList.remove('active');
+        link.classList.remove('hideOnMobile'); // Remove hideOnMobile class as well
     });
 }
 
@@ -19,7 +20,13 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             console.log('Active Section:', id);
             removeActiveClass(); // Remove active class from all navbar links
-            document.querySelector('nav a[href="#' + sec.id + '"]').classList.add('active');
+            
+            // Select all navigation links that match the section id from both lists
+            let matchingLinks = document.querySelectorAll('nav a[href="#' + sec.id + '"]');
+            matchingLinks.forEach(link => {
+                link.classList.add('active');
+                link.classList.add('hideOnMobile'); // Add hideOnMobile class
+            });
         };
     });
 };
