@@ -37,6 +37,7 @@ nav a {
     align-items: center;
     border-radius: 20px;
     font-weight: 700;
+    transition: all 0.5s ease-in-out; /* Adjust timing and easing function as needed */
 }
 
 nav a:hover,
@@ -98,7 +99,7 @@ section .about-me h1 {
 }
 
 section .about-me .green-text {
-    color: rgb(23, 204, 23)
+    color: rgb(8, 235, 8)
 }
 
 section .about-me-img img {
@@ -108,6 +109,123 @@ section .about-me-img img {
     border-radius: 50%; /* Makes the border circular */
     box-shadow: 0 0 20px 5px rgb(44, 177, 44); /* Initial box-shadow with green glow */
     animation: glowing 2s infinite alternate; /* Apply a glowing animation */
+}
+
+section .about-me h1 {
+    font-size: 50px;
+}
+
+#skills {
+    display: flex;
+    justify-content: center; /* Center the skills container horizontally */
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+#skills ul {
+    list-style: none;
+}
+
+#skills .skills-container {
+    width: 50%; /* Set the width of the skills container */
+    max-width: 600px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills .skills-container h2{
+    font-size: 50px;
+}
+
+#skills .skills-container hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(44, 177, 44);
+}
+
+#skills .skills-container .technical-skills {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line */
+    justify-content: center; /* Center items horizontally */
+}
+
+#skills .technical-skills .technical-skills-bar {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px 10px; /* Adjust padding as needed */
+    font-size: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+}
+
+.contact-container-left h1 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+.contact-container-left hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(44, 177, 44);
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+}
+
+.contact-container textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+
+}
+
+.contact-inputs:focus {
+    border: 2.5px solid rgb(44, 177, 44);
+}
+
+.contact-inputs::placeholder {
+    color: grey;
+}
+
+.contact-container button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: black;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(3, 240, 3);
+    cursor: pointer;
 }
 
 @keyframes glowing {
@@ -130,7 +248,6 @@ section:nth-child(odd) {
     .menu-button {
         display: block;
     }
-
 }
 
 @media(max-width: 400px){
