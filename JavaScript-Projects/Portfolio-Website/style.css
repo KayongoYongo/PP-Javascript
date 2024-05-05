@@ -19,7 +19,7 @@ nav ul{
     width: 100%;
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -43,7 +43,11 @@ nav a {
 nav a:hover,
 nav a.active,
 nav a.active.hideOnMobile{
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.938);
+}
+
+nav li:first-child {
+    margin-right: auto;
 }
 
 .sidebar{
@@ -58,7 +62,7 @@ nav a.active.hideOnMobile{
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-start; 
 }
 
 .svg-path {
@@ -106,6 +110,18 @@ section .about-me h1 {
     font-size: 50px;
 }
 
+#about .about-me .contact-buttons {
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 10px;
+    transition: transform 0.3s ease
+} 
+
+#about .about-me .contact-buttons:hover {
+    transform: scale(1.2); 
+}
+
+
 #about .about-me .download-resume-btn {
     color: white;
     background-color: rgb(5, 197, 5);
@@ -141,13 +157,20 @@ section .about-me h1 {
     background-color: rgb(5, 197, 5);
 }
 
+
+
 section .about-me-img img {
+    display: block;
     width: 70%; /* Set the width to 50% of its parent container */
     height: auto; /* Maintain the aspect ratio */
     border: none; /* Remove any border */
     border-radius: 50%; /* Makes the border circular */
     box-shadow: 0 0 20px 5px rgb(44, 177, 44); /* Initial box-shadow with green glow */
     animation: glowing 2s infinite alternate; /* Apply a glowing animation */
+}
+
+#about .about-me-img {
+    text-align: center;
 }
 
 @keyframes glowing {
@@ -159,47 +182,144 @@ section .about-me-img img {
     }
 }
 
+@media(max-width: 800px){
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column; /* Change to column-reverse to move the image above */
+        align-items: center; /* Align items to center */
+    }
+
+    #about .about-me-img {
+        order: -1; /* Move the image above the text */
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+    #about .about-me-img img {
+        width: 50%; /* Set the width to 50% of its parent container */
+        height: auto;
+    }
+
+    #about .about-me .download-resume-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #about .about-me .contact-me-btn  {
+        width: 100%;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar {
+        width: 100%;
+    }
+}
+
 /* Styling of the projects section starts from here */
 #projects .projects-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
 }
 
 #projects .projects-container .single-project-container {
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
+    margin-right: 20px;
     width: 600px;
-    height: 350px;
+    height: 600px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    align-items: center; /* Align items vertically */
+    height: auto; /* Set height to auto to allow content to dictate height */
+    flex-direction: column; /* Stack children vertically */
+    transition: box-shadow 0.3s ease;
+}
+
+#projects .projects-container .single-project-container:hover {
+    box-shadow: 0 0 20px 5px rgb(44, 177, 44);
 }
 
 #projects .projects-container .single-project-container .text-container {
-    width: 300px;
+    flex: 1; /* Let it take remaining space */
+    margin-top: 20px;
 }
 
+#projects .projects-container .single-project-container .text-container p {
+    width: 100%;
+}
+#projects .projects-container .single-project-container .image-container {
+    margin-top: 20px;
+    flex: 1; /* Let it take remaining space */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-self: center;
+    padding-bottom: 10px;
+}
 
-#projects .projects-container .single-project-container img {
-    height: 300px;
-    width: 300px;
+#projects .projects-container .single-project-container .image-container img {
+    height: 600px;
+    width: 100%;
     border-radius: 10px;
+}
+
+#projects .projects-container .single-project-container .links img {
+    height: 50px;
+    width:  100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .projects-container .single-project-container .links .telegram {
+    margin-left: 30px;
+    border-radius: 50%;
+    width: auto;
+}
+
+#projects .projects-container .single-project-container .links .github {
+    border-radius: 3px;
+    border-radius: 50%;
+    width: auto;
+}
+
+#projects .projects-container .single-project-container .links img:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 5px 5px rgb(47, 233, 47);
 }
 
 #projects .projects-container .single-project-container .tools .tools-bar {
     list-style-type: none;
     border: 1px solid black;
     margin-bottom: 10px;
+    margin-left: 5px;
     height: 25px;
     width: auto;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 5px;
     padding-left: 5px;
     padding-right: 5px;
+    background-color: black;
+}
+
+@media(max-width: 800px) {
+    #projects .projects-container .single-project-container {
+        width: 100%;
+        margin-left: 10px;
+    }
 }
 
 /* Styling for the skills section starts here */
@@ -334,7 +454,7 @@ section .about-me-img img {
     margin-bottom: 10px; /* Add space between the image and the text */
 }
 
-/* SStyling for the experience section starts here*/
+/* Styling for the experience section starts here*/
 #experience .timeline {
     position: relative;
     max-width: 1200px;
@@ -499,6 +619,7 @@ section .about-me-img img {
     }
 }
 
+
 /* Styling for the contact section starts here*/
 
 .contact-container {
@@ -564,19 +685,4 @@ section .about-me-img img {
 
 section:nth-child(odd) {
     background: grey;
-}
-
-@media(max-width: 800px){
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-button {
-        display: block;
-    }
-}
-
-@media(max-width: 400px){
-    .sidebar {
-        width: 100%;
-    }
 }
