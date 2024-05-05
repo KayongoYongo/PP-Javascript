@@ -159,6 +159,49 @@ section .about-me-img img {
     }
 }
 
+/* Styling of the projects section starts from here */
+#projects .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects .projects-container .single-project-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#projects .projects-container .single-project-container .text-container {
+    width: 300px;
+}
+
+
+#projects .projects-container .single-project-container img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#projects .projects-container .single-project-container .tools .tools-bar {
+    list-style-type: none;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    height: 25px;
+    width: auto;
+    display: inline-block;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 /* Styling for the skills section starts here */
 #skills {
     display: flex;
