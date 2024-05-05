@@ -99,11 +99,46 @@ section .about-me h1 {
 }
 
 section .about-me .green-text {
-    color: rgb(8, 235, 8)
+    color: rgb(8, 235, 8);
 }
 
 section .about-me h1 {
     font-size: 50px;
+}
+
+#about .about-me .download-resume-btn {
+    color: white;
+    background-color: rgb(5, 197, 5);
+    margin-right: 20px;
+    height: 60px;
+    width: 240px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#about .about-me .download-resume-btn:hover {
+    color: rgb(5, 197, 5);
+    background: transparent;
+    border-color: rgb(5, 197, 5);
+}
+
+#about .about-me .contact-me-btn {
+    background: transparent;
+    height: 60px;
+    width: 240px;
+    border-color: rgb(5, 197, 5);
+    border-radius: 10px;
+}
+
+#about .about-me .contact-me-btn {
+    color: rgb(5, 197, 5);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#about .about-me .contact-me-btn:hover {
+    color: white;
+    background-color: rgb(5, 197, 5);
 }
 
 section .about-me-img img {
@@ -124,6 +159,7 @@ section .about-me-img img {
     }
 }
 
+/* Styling for the skills section starts here */
 #skills {
     display: flex;
     justify-content: center; /* Center the skills container horizontally */
@@ -136,8 +172,7 @@ section .about-me-img img {
 }
 
 #skills .skills-container {
-    width: 50%; /* Set the width of the skills container */
-    max-width: 600px; /* Adjust as needed */
+    width: 70%; /* Set the width of the skills container */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,12 +203,92 @@ section .about-me-img img {
     display: inline-block;
     align-items: center;
     justify-content: center;
-    background-color: grey;
+    background-color: rgba(170, 168, 168, 0.973);
+    margin-top: 10px;
     margin: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     border-radius: 10px;
-    padding: 5px 10px; /* Adjust padding as needed */
+    padding: 10px; /* Adjust padding as needed */
     font-size: 20px;
+    text-align: center; /* Center text horizontally */
+    animation: moveright 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes moveright {
+    0% {
+        opacity: 0;
+        transform: translateY(10px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move up to its original position */
+    }
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(1){
+    animation-delay: 0s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(2){
+    animation-delay: 0.10s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(3){
+    animation-delay: 0.20s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(4){
+    animation-delay: 0.30s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(5){
+    animation-delay: 0.40s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(6){
+    animation-delay: 0.50s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(7){
+    animation-delay: 1.30s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(8){
+    animation-delay: 1.40s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(9){
+    animation-delay: 1.50s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(10){
+    animation-delay: 1.60s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(11){
+    animation-delay: 1.70s;
+}
+#skills .technical-skills .technical-skills-bar:nth-child(12){
+    animation-delay: 1.80s;
+}
+#skills .technical-skills .technical-skills-bar:nth-child(13){
+    animation-delay: 2.50s;
+}
+
+#skills .technical-skills .technical-skills-bar:nth-child(14){
+    animation-delay: 2.60s;
+}
+
+#skills .technical-skills .technical-skills-bar:hover {
+    box-shadow: 0 0 10px 1px rgb(4, 255, 4);;
+}
+
+#skills .technical-skills .technical-skills-bar img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px; /* Add space between the image and the text */
 }
 
 /* SStyling for the experience section starts here*/
